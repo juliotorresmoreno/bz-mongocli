@@ -1,0 +1,25 @@
+[
+    {
+        "name": "remove-user",
+        "description": "Removes the specified username from the database.",
+        "inputs": [
+            {
+                "name": "user",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "database",
+                "type": "string",
+                "qty": "single"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "response",
+                "type": "string",
+                "qty": "single"
+            }
+        ]
+    }
+]
