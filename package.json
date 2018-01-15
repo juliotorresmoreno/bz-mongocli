@@ -1,6 +1,6 @@
 {
     "name": "MongoDB",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "private": true,
     "scripts": {
         "test": "cross-env NODE_ENV=test node_modules/.bin/jest",

@@ -1,1 +1,6 @@
-16:01:47 paso 4, line: 7
+Mon Jan 15 2018 09:01:22 GMT-0500 (SA Pacific Standard Time)
+Mon Jan 15 2018 09:01:22 GMT-0500 (SA Pacific Standard Time) ["buildInfo","listDatabases","ping","replSetGetStatus","serverInfo","serverStatus"]
+Mon Jan 15 2018 09:01:22 GMT-0500 (SA Pacific Standard Time) function
+Mon Jan 15 2018 09:01:23 GMT-0500 (SA Pacific Standard Time) callback
+Mon Jan 15 2018 09:01:23 GMT-0500 (SA Pacific Standard Time) ok
+Mon Jan 15 2018 09:01:23 GMT-0500 (SA Pacific Standard Time) data: {"ok":1}

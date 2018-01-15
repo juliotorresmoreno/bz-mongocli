@@ -16,7 +16,21 @@
         ],
         "outputs": [
             {
-                "name": "response",
+                "name": "ok",
+                "type": "string",
+                "qty": "single"
+            }
+        ]
+    },
+    {
+        "name": "ping",
+        "description": "",
+        "inputs": [
+
+        ],
+        "outputs": [
+            {
+                "name": "ok",
                 "type": "string",
                 "qty": "single"
             }
