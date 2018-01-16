@@ -1,11 +1,11 @@
 {
     "name": "MongoDB",
-    "version": "0.0.25",
+    "version": "0.0.38",
     "private": true,
     "scripts": {
         "test": "cross-env NODE_ENV=test node_modules/.bin/jest",
         "dev": "npm run babel-node",
-        "babel-node": "cross-env node_modules/.bin/babel src --out-dir ./build/actions --watch",
+        "babel-node": "cross-env node_modules/.bin/babel src --out-dir ./build/actions",
         "build": "node generate.js && cross-env node_modules/.bin/bz-def && npm run setup && npm run define && npm run production && npm run bundle && npm run clear",
         "setup": "cross-env node_modules/.bin/cpr package.json ./build/package.json -o && cross-env node_modules/.bin/cpr README.md ./build/README.md -o",
         "define": "npm run define:clear && npm run define:copy && cross-env node_modules/.bin/rimraf def",

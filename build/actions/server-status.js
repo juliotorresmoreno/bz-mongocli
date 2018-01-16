@@ -3,10 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.doSomeAction = doSomeAction;
-/**
- * @author: ________
- */
-function doSomeAction(deps, globals, actionName, data, authenticationType, logger, done) {};
 
-var invoke = exports.invoke = doSomeAction.bind(null, {});
+var _serverStatus = require("C:\\Users\\user\\Desktop\\bz-mongo\\lib\\server-status.js");
+
+Object.defineProperty(exports, "invoke", {
+  enumerable: true,
+  get: function get() {
+    return _serverStatus.invoke;
+  }
+});
