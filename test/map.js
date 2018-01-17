@@ -38,6 +38,8 @@ function type(val) {
         return "boolean";
     if (typeof val === "string")
         return 'string';
+    if (typeof val === "object")
+        return 'object';
 }
 
 const name = function(value) {
@@ -48,7 +50,6 @@ function map(output) {
     if (typeof output === "object") {
         return Object.keys(output).map((v) => {
             if (/(<|>)/.test(v)) return;
-            var _type = type(output[v]);
             if (typeof output[v] === 'object') {
                 if (!Array.isArray(output[v])) {
                     return {
@@ -60,6 +61,7 @@ function map(output) {
                         })
                     };
                 } else {
+                    var _type = type(output[v]);
                     if (output[v].length === 0) return;
                     if (_type === 'object')
                         return {
@@ -77,6 +79,7 @@ function map(output) {
                     };
                 }
             }
+            var _type = type(output[v]);
             if (output[v].length === 0 && Array.isArray(output[v])) return;
             if (_type === undefined) return;
             return {

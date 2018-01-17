@@ -1,13 +1,8 @@
 [
     {
-        "name": "remove-user",
-        "description": "Removes the specified username from the database.",
+        "name": "rep-i-set-get-status",
+        "description": "The replSetGetStatus command returns the status of the replica set from the point of view of the server that processed the command. replSetGetStatus must be run against the admin database. The command has the following prototype form: { replSetGetStatus: 1 }",
         "inputs": [
-            {
-                "name": "user",
-                "type": "string",
-                "qty": "single"
-            },
             {
                 "name": "database",
                 "type": "string",
@@ -17,31 +12,79 @@
         "outputs": [
             {
                 "name": "ok",
+                "type": "integer",
+                "qty": "single"
+            },
+            {
+                "name": "errmsg",
                 "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "code",
+                "type": "integer",
+                "qty": "single"
+            },
+            {
+                "name": "codeName",
+                "type": "string",
+                "qty": "single"
+            }
+        ]
+    },
+    {
+        "name": "list-databases",
+        "description": "The listDatabases command provides a list of all existing databases along with basic statistics about them. The listDatabases must run against the admin database, as in the following example: db.adminCommand( { listDatabases: 1 } )",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "databases",
+                "type": "object",
+                "qty": "list",
+                "props": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "sizeOnDisk",
+                        "type": "integer",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "empty",
+                        "type": "boolean",
+                        "qty": "single"
+                    }
+                ]
+            },
+            {
+                "name": "totalSize",
+                "type": "integer",
+                "qty": "single"
+            },
+            {
+                "name": "ok",
+                "type": "integer",
                 "qty": "single"
             }
         ]
     },
     {
         "name": "ping",
-        "description": "",
-        "inputs": [],
-        "outputs": [
+        "description": "The ping command is a no-op used to test whether a server is responding to commands. This command will return immediately even if the server is write-locked: { ping: 1 }",
+        "inputs": [
             {
-                "name": "ok",
+                "name": "database",
                 "type": "string",
                 "qty": "single"
             }
-        ]
-    },
-    {
-        "name": "repl-set-get-status",
-        "description": "",
-        "inputs": [],
+        ],
         "outputs": [
             {
                 "name": "ok",
-                "type": "string",
+                "type": "integer",
                 "qty": "single"
             }
         ]
@@ -69,6 +112,218 @@
             {
                 "name": "codeName",
                 "type": "string",
+                "qty": "single"
+            }
+        ]
+    },
+    {
+        "name": "server-status",
+        "description": "The serverStatus command returns a document that provides an overview of the database’s state. Monitoring applications can run this command at a regular interval to collect statistics about the instance.",
+        "inputs": [
+            {
+                "name": "database",
+                "type": "string",
+                "qty": "single"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "host",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "version",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "process",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "pid",
+                "type": "integer",
+                "qty": "single"
+            },
+            {
+                "name": "uptime",
+                "type": "integer",
+                "qty": "single"
+            },
+            {
+                "name": "uptimeMillis",
+                "type": "integer",
+                "qty": "single"
+            },
+            {
+                "name": "uptimeEstimate",
+                "type": "integer",
+                "qty": "single"
+            },
+            {
+                "name": "localTime",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "connections",
+                "type": "object",
+                "qty": "single",
+                "props": [
+                    {
+                        "name": "current",
+                        "type": "integer",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "available",
+                        "type": "integer",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "totalCreated",
+                        "type": "integer",
+                        "qty": "single"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "build-info",
+        "description": "The buildInfo command is an administrative command which returns a build summary for the current mongod. buildInfo has the following prototype form: { buildInfo: 1 }",
+        "inputs": [
+            {
+                "name": "database",
+                "type": "string",
+                "qty": "single"
+            }
+        ],
+        "outputs": [
+            {
+                "name": "version",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "gitVersion",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "allocator",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "javascriptEngine",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "sysInfo",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "versionArray",
+                "type": "integer",
+                "qty": "list"
+            },
+            {
+                "name": "openssl",
+                "type": "object",
+                "qty": "single",
+                "props": [
+                    {
+                        "name": "running",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "compiled",
+                        "type": "string",
+                        "qty": "single"
+                    }
+                ]
+            },
+            {
+                "name": "buildEnvironment",
+                "type": "object",
+                "qty": "single",
+                "props": [
+                    {
+                        "name": "distmod",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "distarch",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "cc",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "ccflags",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "cxx",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "cxxflags",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "linkflags",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "target_arch",
+                        "type": "string",
+                        "qty": "single"
+                    },
+                    {
+                        "name": "target_os",
+                        "type": "string",
+                        "qty": "single"
+                    }
+                ]
+            },
+            {
+                "name": "bits",
+                "type": "integer",
+                "qty": "single"
+            },
+            {
+                "name": "debug",
+                "type": "boolean",
+                "qty": "single"
+            },
+            {
+                "name": "maxBsonObjectSize",
+                "type": "integer",
+                "qty": "single"
+            },
+            {
+                "name": "storageEngines",
+                "type": "string",
+                "qty": "list"
+            },
+            {
+                "name": "ok",
+                "type": "integer",
                 "qty": "single"
             }
         ]
