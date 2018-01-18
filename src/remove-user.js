@@ -1,2 +1,2 @@
 
-export { invoke } from "C:\\Users\\user\\Desktop\\bz-mongo\\lib\\remove-user.js";
+export { invoke } from "C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\remove-user.js";

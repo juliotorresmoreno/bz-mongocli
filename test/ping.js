@@ -1,5 +1,5 @@
 
-const api = require("C:\\Users\\user\\Desktop\\bz-mongo\\lib\\ping.js");
+const api = require("C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\ping.js");
 const invoke = api.invoke;
 
 const exec = require('./exec').exec;

@@ -1,4 +1,4 @@
 
 
 
-export { invoke } from "C:\\Users\\user\\Desktop\\bz-mongo\\lib\\build-info.js";
+export { invoke } from "C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\build-info.js";

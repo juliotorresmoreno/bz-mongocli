@@ -1,5 +1,5 @@
 
-const api = require("C:\\Users\\user\\Desktop\\bz-mongo\\lib\\server-info.js");
+const api = require("C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\server-info.js");
 const invoke = api.invoke;
 
 const exec = require('./exec').exec;

@@ -1,4 +1,4 @@
 
 
 
-export { invoke } from "C:\\Users\\user\\Desktop\\bz-mongo\\lib\\repl-set-get-status.js";
+export { invoke } from "C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\repl-set-get-status.js";

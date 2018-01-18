@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _serverInfo = require("C:\\Users\\user\\Desktop\\bz-mongo\\lib\\server-info.js");
+var _serverInfo = require("C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\server-info.js");
 
 Object.defineProperty(exports, "invoke", {
   enumerable: true,

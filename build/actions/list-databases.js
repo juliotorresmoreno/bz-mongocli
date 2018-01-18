@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _listDatabases = require("C:\\Users\\user\\Desktop\\bz-mongo\\lib\\list-databases.js");
+var _listDatabases = require("C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\list-databases.js");
 
 Object.defineProperty(exports, "invoke", {
   enumerable: true,

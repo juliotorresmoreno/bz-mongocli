@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _removeUser = require("C:\\Users\\user\\Desktop\\bz-mongo\\lib\\remove-user.js");
+var _removeUser = require("C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\remove-user.js");
 
 Object.defineProperty(exports, "invoke", {
   enumerable: true,

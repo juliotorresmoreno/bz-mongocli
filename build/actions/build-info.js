@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _buildInfo = require("C:\\Users\\user\\Desktop\\bz-mongo\\lib\\build-info.js");
+var _buildInfo = require("C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\build-info.js");
 
 Object.defineProperty(exports, "invoke", {
   enumerable: true,

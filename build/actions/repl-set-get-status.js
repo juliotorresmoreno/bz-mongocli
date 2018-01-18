@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _replSetGetStatus = require("C:\\Users\\user\\Desktop\\bz-mongo\\lib\\repl-set-get-status.js");
+var _replSetGetStatus = require("C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\repl-set-get-status.js");
 
 Object.defineProperty(exports, "invoke", {
   enumerable: true,
