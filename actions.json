@@ -75,16 +75,34 @@
         "name": "ping",
         "description": "The ping command is a no-op used to test whether a server is responding to commands. This command will return immediately even if the server is write-locked: { ping: 1 }",
         "inputs": [
+        ],
+        "outputs": [
+            {
+                "name": "ok",
+                "type": "integer",
+                "qty": "single"
+            }
+        ]
+    },
+    {
+        "name": "command",
+        "description": "",
+        "inputs": [
             {
                 "name": "database",
+                "type": "string",
+                "qty": "single"
+            },
+            {
+                "name": "command",
                 "type": "string",
                 "qty": "single"
             }
         ],
         "outputs": [
             {
-                "name": "ok",
-                "type": "integer",
+                "name": "response",
+                "type": "string",
                 "qty": "single"
             }
         ]

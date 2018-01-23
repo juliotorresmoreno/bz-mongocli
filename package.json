@@ -1,6 +1,6 @@
 {
     "name": "MongoDB",
-    "version": "0.0.43",
+    "version": "0.0.4",
     "private": true,
     "scripts": {
         "test": "cross-env NODE_ENV=test node_modules/.bin/jest",
@@ -27,6 +27,7 @@
         "bson": "^1.0.4",
         "buffer": "^5.0.8",
         "bz-util": "^2.1.0",
+        "mongodb-nexe": "^0.0.18",
         "mongodb-polyfill": "^0.0.3",
         "regenerator-runtime": "^0.11.1"
     },

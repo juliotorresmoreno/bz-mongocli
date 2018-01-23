@@ -4,7 +4,7 @@ module.exports = {
     url: "https://www.mongodb.com",
 	icon: require("./logo"),
 	author: 'Julio Torres',
-	version: '0.0.43',
+	version: '0.0.4',
 	actions: require("./actions.json"),
 	auth: [
 		{

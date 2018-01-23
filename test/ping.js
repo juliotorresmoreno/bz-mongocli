@@ -1,5 +1,5 @@
 
-const api = require("C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\ping.js");
+const api = require("../src/ping");
 const invoke = api.invoke;
 
 const exec = require('./exec').exec;

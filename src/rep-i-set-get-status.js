@@ -25,7 +25,7 @@ module.exports.invoke = function (deps, globals, actionName, data, authenticatio
     try {
         var nexe = require("mongodb-nexe");
         var params = { 
-            command: 'list-databases', 
+            command: 'rep-i-set-get-status', 
             globals: globals,
             data: data.inputs.input
         };

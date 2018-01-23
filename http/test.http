@@ -1,0 +1,25 @@
+
+POST http://localhost:8080/connector/invokeCustomAction
+Content-Type: application/json
+
+{
+    "controllerversion": "1.0",
+    "connectorpath": "C:\\Bizagi\\Projects\\project1\\Tools\\connectors\\node\\mongodb\\0.0",
+    "enablelog": true,
+    "actionname": "add-users",
+    "authenticationtype": "custom",
+    "data": "{ \"inputs\": { \"input\": {\"username\":\"user1\",\"password\":\"123456\",\"readOnly\":false,\"database\":\"analitico\"} } }",
+    "globals": "{ \"systemproperties\": {}, \"projectname\": \"bz\", \"authdata\": { \"host\": \"192.168.0.84\", \"port\": \"5000\" } }"
+}
+
+
+###
+
+
+
+{
+"username": "user1",
+"password": "123456",
+"readOnly": false,
+"database": "analitico"
+}

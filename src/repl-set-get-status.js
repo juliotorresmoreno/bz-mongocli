@@ -1,4 +1,0 @@
-
-
-
-export { invoke } from "C:\\Users\\admin\\projects\\mongodb-polyfill\\lib\\repl-set-get-status.js";

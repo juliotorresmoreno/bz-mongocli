@@ -1,5 +1,4 @@
 
-
 var spawn = require("child_process").spawn;
 var bzUtil = require('bz-util');
 
@@ -25,7 +24,7 @@ module.exports.invoke = function (deps, globals, actionName, data, authenticatio
     try {
         var nexe = require("mongodb-nexe");
         var params = { 
-            command: 'list-databases', 
+            command: 'add-user', 
             globals: globals,
             data: data.inputs.input
         };
